@@ -35,12 +35,12 @@
         <tbody>
         <tr class="table-row" *ngFor="let row of calendarMatrix">
           <td *ngFor="let calendarItem of row">
-            <timeline-day-item fxLayout="column"
+            <ngx-calendar-day-item fxLayout="column"
                                [date]="calendarItem.date"
                                [disabled]="!calendarItem.inCurrentMonth"
                                [currentDay]="calendarItem.isCurrentDay"
                                [recordings]="getRecording(calendarItem.date)">
-            </timeline-day-item>
+            </ngx-calendar-day-item>
           </td>
         </tr>
         </tbody>

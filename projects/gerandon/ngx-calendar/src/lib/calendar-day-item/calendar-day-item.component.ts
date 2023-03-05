@@ -9,9 +9,12 @@ import {
 import {TimelineDayItem} from "../interfaces/calendar-common";
 
 @Component({
-    selector: 'timeline-day-item',
+    selector: 'ngx-calendar-day-item',
     templateUrl: './calendar-day-item.component.html',
     styleUrls: ['./calendar-day-item.component.scss'],
+    host: {
+      'class': 'ngx-calendar-day-item'
+    },
     encapsulation: ViewEncapsulation.None
 })
 export class CalendarDayItemComponent implements OnInit {

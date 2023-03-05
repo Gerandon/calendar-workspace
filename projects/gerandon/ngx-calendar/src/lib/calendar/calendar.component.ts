@@ -12,9 +12,12 @@ import {isMoment, Moment} from "moment";
 import {CalendarHeaderDirection, TimelineData, TimelineDayItem} from "../interfaces/calendar-common";
 
 @Component({
-    selector: 'timeline',
+    selector: 'ngx-calendar',
     templateUrl: './calendar.component.html',
     styleUrls: ['./calendar.component.scss'],
+    host: {
+      'class': 'ngx-calendar',
+    },
     encapsulation: ViewEncapsulation.None,
     changeDetection: ChangeDetectionStrategy.OnPush
 })

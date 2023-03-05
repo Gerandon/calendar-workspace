@@ -1,18 +1,26 @@
-timeline {
-    .table-container {
-        overflow-x: auto;
+ngx-calendar, .ngx-calendar {
+  &__header {
+    display: grid;
+    grid-template-columns: calc(100% / 3) calc(100% / 3) calc(100% / 3);
+    place-items: center;
+  }
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    table-layout: fixed;
+    height: 100%;
+    width: 100%;
+    min-width: 700px;
+
+    .table-row td timeline-day-item {
+      height: 100% !important;
+      min-height: 120px;
     }
-    table {
-        table-layout: fixed;
-        height:100%;
-        width:100%;
-        min-width: 700px;
-        .table-row td timeline-day-item {
-            height:100% !important;
-            min-height: 120px;
-        }
-    }
-    span.current-date {
-        font-size: 17px;
-    }
+  }
+
+  span.current-date {
+    font-size: 17px;
+  }
 }

@@ -1,15 +1,4 @@
-<timeline [date]="timelineDate | async"
+<ngx-calendar [date]="timelineDate | async"
           [timelineData]="timelineData | async"
           (onIntervalChanged)="timelineDate.next($event)">
-  <div additionalHeader
-       fxLayout="row" fxLayoutGap="15px">
-    <div fxFlex="10" class="p-5"
-         [style.color]="'#ffffff'">
-      {{ 'BOOKING.FUEL_LIST.INCOME' }}
-    </div>
-    <div fxFlex="10" class="p-5"
-         [style.color]="'#ffffff'">
-      {{ 'BOOKING.FUEL_LIST.OUTGOINGS' }}
-    </div>
-  </div>
-</timeline>
+</ngx-calendar>

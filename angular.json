@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "@gerandon/calendar": {
+    "@gerandon/ngx-calendar": {
       "projectType": "library",
-      "root": "projects/gerandon/calendar",
-      "sourceRoot": "projects/gerandon/calendar/src",
+      "root": "projects/gerandon/ngx-calendar",
+      "sourceRoot": "projects/gerandon/ngx-calendar/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/gerandon/calendar/ng-package.json"
+            "project": "projects/gerandon/ngx-calendar/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/gerandon/calendar/tsconfig.lib.prod.json"
+              "tsConfig": "projects/gerandon/ngx-calendar/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/gerandon/calendar/tsconfig.lib.json"
+              "tsConfig": "projects/gerandon/ngx-calendar/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,7 +27,7 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "tsConfig": "projects/gerandon/calendar/tsconfig.spec.json",
+            "tsConfig": "projects/gerandon/ngx-calendar/tsconfig.spec.json",
             "polyfills": [
               "zone.js",
               "zone.js/testing"

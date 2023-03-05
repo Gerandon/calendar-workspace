@@ -3,8 +3,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
-      "@gerandon/calendar": [
-        "dist/gerandon/calendar"
+      "@gerandon/ngx-calendar": [
+        "dist/gerandon/ngx-calendar"
       ]
     },
     "baseUrl": "./",

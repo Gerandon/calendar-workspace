@@ -7,14 +7,8 @@ import {MatIconModule} from "@angular/material/icon";
 import {CommonModule} from "@angular/common";
 import {MatButtonModule} from "@angular/material/button";
 import {MatTooltipModule} from "@angular/material/tooltip";
-import {TranslateModule, TranslateLoader, MissingTranslationHandler} from "@ngx-translate/core";
-import {TranslateHttpLoader} from "@ngx-translate/http-loader";
-import {HttpClient, HttpClientModule} from "@angular/common/http";
-import {MissingTranslationService} from "./services/missing-translations.service";
-
-export const createTranslateLoader = (http: HttpClient) => {
-  return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
-}
+import {TranslateModule} from "@ngx-translate/core";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -32,17 +26,7 @@ export const createTranslateLoader = (http: HttpClient) => {
     MatButtonModule,
     MatTooltipModule,
     HttpClientModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: createTranslateLoader,
-        deps: [HttpClient],
-      },
-      missingTranslationHandler: {
-        provide: MissingTranslationHandler,
-        useClass: MissingTranslationService,
-      },
-    }),
+    TranslateModule,
   ]
 })
 export class CalendarModule {

@@ -2,7 +2,7 @@
     <mat-card>
         <mat-card-content>
             <ng-content select="[additionalHeader]"></ng-content>
-            <div #customHeader fxLayout="row">
+            <div #customHeader>
                 <ng-content select="[header]"></ng-content>
             </div>
             <div *ngIf="!customHeader.children?.length" fxLayout="row" class="mt-20 mb-20">

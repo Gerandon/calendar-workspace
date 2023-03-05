@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {BehaviorSubject, Observable, of} from "rxjs";
-import {TimelineData} from "../../../gerandon/calendar/src/lib/interfaces/calendar-common";
+import {TimelineData} from "../../../gerandon/ngx-calendar/src/lib/interfaces/calendar-common";
+import {TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,10 @@ export class AppComponent {
   public timelineDate = new BehaviorSubject<Date>(new Date());
   public timelineData: Observable<TimelineData[]>;
 
-  constructor() {
+  constructor(private translate: TranslateService) {
+    translate.setDefaultLang('hu');
+    translate.use('hu');
+
     this.timelineData = of([
       {
         date: new Date(),

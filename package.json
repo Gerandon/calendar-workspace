@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build:lib": "ng build @gerandon/calendar --configuration development",
+    "start": "ng serve demo",
+    "build:lib": "ng build @gerandon/ngx-calendar --configuration development",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
